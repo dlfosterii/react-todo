@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TodoForm from './components/TodoForm'
 
@@ -42,7 +41,7 @@ class App extends React.Component {
             <h1>Todo Form App</h1>
           </p>
         </header>
-        <TodoForm />
+        <TodoForm onFormSubmit={this.onFormSubmit}/>
         <ul>
           {this.state.todos.map((todo, index) => {
             return (
