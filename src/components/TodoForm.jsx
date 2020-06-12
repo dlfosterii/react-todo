@@ -22,7 +22,7 @@ export default class TodoForm extends Component {
     onNameChange = (e) => {
         this.setState(
             {
-                name: e.target.value,
+                task: e.target.value,
             })
     }
 
@@ -40,7 +40,7 @@ export default class TodoForm extends Component {
                 <div>
                     <label htmlFor="task">Task: </label>
                     <input type="text" id="task"
-                    value={ this.state.name } onChange={this.onNameChange}/>
+                    value={ this.state.task } onChange={this.onNameChange}/>
                 </div>
                 <div>
                     <label htmlFor="complete">Complete?</label>
