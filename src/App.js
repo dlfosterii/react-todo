@@ -37,15 +37,14 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <p>
             <h1>Todo Form App</h1>
-          </p>
+
         </header>
         <TodoForm onFormSubmit={this.onFormSubmit}/>
         <ul>
           {this.state.todos.map((todo, index) => {
             return (
-            <li key={index}>{todo.task} ({todo.complete ? 'done' : 'not done'})</li>
+            <li key={index}>{todo.task} ({todo.complete ? 'done' : 'not done'})<button>Remove</button></li>
             )
           })}
         </ul>
